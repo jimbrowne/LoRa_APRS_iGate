@@ -1,5 +1,5 @@
 {
-	"callsign": "NOCALL-10",
+	"callsign": "BM2023-3",
 	"network": {
 		"DHCP": true,
 		"static": {
@@ -10,45 +10,45 @@
 			"dns2": "192.168.0.2"
 		},
 		"hostname": {
-			"overwrite": false,
-			"name": "NOCALL-10"
+			"overwrite": true,
+			"name": "BM2023-3"
 		}
 	},
 	"wifi": {
 		"active": true,
 		"AP": [
 			{
-				"SSID": "YOURSSID",
-				"password": "YOURPASSWORD"
+				"SSID": "automation",
+				"password": "12345678"
 			}
 		]
 	},
 	"beacon": {
-		"message": "LoRa iGATE & Digi, Info: github.com/lora-aprs/LoRa_APRS_iGate",
+		"message": "Black Rock City iGate 3 de AB0OO",
 		"position": {
 			"latitude": 0.000000,
 			"longitude": 0.000000
 		},
-		"use_gps": false,
+		"use_gps": true,
 		"timeout": 15,
 		"send_on_hf": false
 	},
 	"aprs_is": {
 		"active": true,
-		"passcode": "",
-		"server": "euro.aprs2.net",
+		"passcode": "12716",
+		"server": "rotate.aprs2.net",
 		"port": 14580,
 		"filter": ""
 	},
 	"digi": {
-		"active": false
+		"active": true
 	},
 	"lora": {
-		"frequency_rx": 433775000,
+		"frequency_rx": 913500000,
 		"gain_rx": 0,
-		"frequency_tx": 433775000,
+		"frequency_tx": 913500000,
 		"power": 20,
-		"spreading_factor": 12,
+		"spreading_factor": 7,
 		"signal_bandwidth": 125000,
 		"coding_rate4": 5,
 		"tx_enable": false
@@ -69,11 +69,11 @@
 		]
 	},
 	"mqtt": {
-		"active": false,
-		"server": "",
+		"active": true,
+		"server": "vps.gorkos.net",
 		"port": 1883,
-		"name": "",
-		"password": "",
+		"name": "aprs",
+		"password": "2V@QnZ$$D4Tx8B",
 		"topic": "LoraAPRS/Data",
 		"will_active": false,
 		"will_topic": "LoraAPRS/State",
@@ -85,5 +85,6 @@
 		"server": "",
 		"port": 514
 	},
-	"ntp_server": "pool.ntp.org"
+	"ntp_server": "pool.ntp.org",
+	"board": "TTGO_T_Beam_V1_0"
 }

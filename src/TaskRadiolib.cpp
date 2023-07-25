@@ -16,7 +16,7 @@ RadiolibTask::~RadiolibTask() {
 bool RadiolibTask::setup(System &system) {
   SPI.begin(system.getBoardConfig()->Lora.Sck, system.getBoardConfig()->Lora.Miso, system.getBoardConfig()->Lora.Mosi, system.getBoardConfig()->Lora.CS);
   _module = new Module(system.getBoardConfig()->Lora.CS, system.getBoardConfig()->Lora.IRQ, system.getBoardConfig()->Lora.Reset);
-  _radio  = new SX1278(_module);
+  _radio  = new SX1276(_module);
 
   _rxEnable = true;
   _txEnable = system.getUserConfig()->lora.tx_enable;
