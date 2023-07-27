@@ -1,5 +1,6 @@
 {
-	"callsign": "BM2023-3",
+	"board": "TTGO_T_Beam_V1_0",
+	"callsign": "BM2023-1",
 	"network": {
 		"DHCP": true,
 		"static": {
@@ -11,7 +12,7 @@
 		},
 		"hostname": {
 			"overwrite": true,
-			"name": "BM2023-3"
+			"name": "BM2023-1"
 		}
 	},
 	"wifi": {
@@ -24,7 +25,7 @@
 		]
 	},
 	"beacon": {
-		"message": "Black Rock City iGate 3 de AB0OO",
+		"message": "Black Rock City iGate 1 de AB0OO",
 		"position": {
 			"latitude": 0.000000,
 			"longitude": 0.000000
@@ -48,7 +49,7 @@
 		"gain_rx": 0,
 		"frequency_tx": 913500000,
 		"power": 20,
-		"spreading_factor": 7,
+		"spreading_factor": 8,
 		"signal_bandwidth": 125000,
 		"coding_rate4": 5,
 		"tx_enable": false
@@ -85,6 +86,5 @@
 		"server": "",
 		"port": 514
 	},
-	"ntp_server": "pool.ntp.org",
-	"board": "TTGO_T_Beam_V1_0"
+	"ntp_server": "pool.ntp.org"
 }
