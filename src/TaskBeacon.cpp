@@ -39,7 +39,9 @@ bool BeaconTask::setup(System &system) {
     }
   }
   // setup beacon
-  _beacon_timer.setTimeout(system.getUserConfig()->beacon.timeout * 60 * 1000);
+  // randomize the beacon time +/- 2 1/2 seconds
+  long dither = random(5000) - 2500;
+  _beacon_timer.setTimeout(system.getUserConfig()->beacon.timeout * 60 * 1000 + dither);
 
   _beaconMsg = std::shared_ptr<APRSMessage>(new APRSMessage());
   _beaconMsg->setSource(system.getUserConfig()->callsign);
