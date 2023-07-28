@@ -1,6 +1,6 @@
 {
 	"board": "TTGO_T_Beam_V1_0",
-	"callsign": "BM2023-1",
+	"callsign": "BM2023-3",
 	"network": {
 		"DHCP": true,
 		"static": {
@@ -12,7 +12,7 @@
 		},
 		"hostname": {
 			"overwrite": true,
-			"name": "BM2023-1"
+			"name": "BM2023-3"
 		}
 	},
 	"wifi": {
@@ -25,7 +25,7 @@
 		]
 	},
 	"beacon": {
-		"message": "Black Rock City iGate 1 de AB0OO",
+		"message": "Black Rock City iGate 3 de AB0OO",
 		"position": {
 			"latitude": 0.000000,
 			"longitude": 0.000000

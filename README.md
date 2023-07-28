@@ -5,7 +5,10 @@
 The LoRa APRS iGate will work with very cheep hardware which you can buy from amazon, ebay or aliexpress.
 Try it out and be part of the APRS network.
 
-![TTGO LoRa32](pics/iGate.png)
+This branch has been specifically tweaked to be used in Black Rock City for device/vehicle tracking at Burning Man.  Direct initial questions
+to AB0OO via the issue page on Github before going upstream, please.
+
+![TTGO T-Beam 1.1](pics/LILYGO-tbeam-11.jpeg)
 
 ## Blog posts and Youtube videos from other Hams
 
