@@ -14,6 +14,7 @@
 #include "TaskDisplay.h"
 #include "TaskEth.h"
 #include "TaskFTP.h"
+#include "TaskHTTP.h"
 #include "TaskMQTT.h"
 #include "TaskNTP.h"
 #include "TaskOTA.h"
@@ -44,6 +45,7 @@ WifiTask     wifiTask;
 OTATask      otaTask;
 NTPTask      ntpTask;
 FTPTask      ftpTask;
+HTTPTask     httpTask;
 MQTTTask     mqttTask(toMQTT);
 AprsIsTask   aprsIsTask(toAprsIs, toModem);
 RouterTask   routerTask(fromModem, toModem, toAprsIs, toMQTT);
@@ -52,6 +54,7 @@ BeaconTask   beaconTask(toModem, toAprsIs);
 void setup() {
   Serial.begin(115200);
   LoRaSystem.getLogger().setSerial(&Serial);
+  LoRaSystem.getLogger().setMemory(30);
   setWiFiLogger(&LoRaSystem.getLogger());
   delay(500);
   LoRaSystem.getLogger().log(logging::LoggerLevel::LOGGER_LEVEL_INFO, MODULE_NAME, "LoRa APRS iGate by OE5BPA (Peter Buchegger)");
@@ -141,6 +144,7 @@ void setup() {
     if (userConfig.ftp.active) {
       LoRaSystem.getTaskManager().addTask(&ftpTask);
     }
+    LoRaSystem.getTaskManager().addTask(&httpTask);
 
     if (userConfig.aprs_is.active) {
       LoRaSystem.getTaskManager().addTask(&aprsIsTask);

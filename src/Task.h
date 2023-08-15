@@ -5,6 +5,7 @@ enum TaskNames {
   TaskAprsIs = 1,
   TaskEth,
   TaskFtp,
+  TaskHttp,
   TaskModem,
   TaskRadiolib,
   TaskNtp,
@@ -19,6 +20,7 @@ enum TaskNames {
 #define TASK_APRS_IS  "AprsIsTask"
 #define TASK_ETH      "EthTask"
 #define TASK_FTP      "FTPTask"
+#define TASK_HTTP     "HTTPTask"
 #define TASK_MODEM    "ModemTask"
 #define TASK_RADIOLIB "RadiolibTask"
 #define TASK_NTP      "NTPTask"
