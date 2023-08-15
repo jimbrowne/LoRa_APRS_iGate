@@ -24,6 +24,11 @@ public:
   bool                       isWifiOrEthConnected() const;
   void                       connectedViaEth(bool status);
   void                       connectedViaWifi(bool status);
+  void                       gpsConnected(bool status);
+  bool                       isGpsActive();
+  void                       gpsLocation(double lat, double lng);
+  double                     getGpsLat(void);
+  double                     getGpsLong(void);
   logging::Logger           &getLogger();
 
 private:
@@ -33,6 +38,9 @@ private:
   Display              _display;
   bool                 _isEthConnected;
   bool                 _isWifiConnected;
+  bool                 _isGpsConnected;
+  double               _lat;
+  double               _lng;
   logging::Logger      _logger;
 };
 

@@ -1,7 +1,8 @@
 
 #include "System.h"
 
-System::System() : _boardConfig(0), _userConfig(0), _isEthConnected(false), _isWifiConnected(false) {
+System::System() : _boardConfig(0), _userConfig(0), _isEthConnected(false), _isWifiConnected(false),
+    _isGpsConnected(false) {
 }
 
 System::~System() {
@@ -41,6 +42,27 @@ void System::connectedViaEth(bool status) {
 
 void System::connectedViaWifi(bool status) {
   _isWifiConnected = status;
+}
+
+void System::gpsConnected(bool status) {
+  _isGpsConnected = status;
+}
+
+bool System::isGpsActive() {
+  return _isGpsConnected;
+}
+
+void System::gpsLocation(double lat, double lng) {
+  _lat = lat;
+  _lng = lng;
+}
+
+double System::getGpsLat(void) {
+  return _lat;
+}
+
+double System::getGpsLong(void) {
+  return _lng;
 }
 
 logging::Logger &System::getLogger() {

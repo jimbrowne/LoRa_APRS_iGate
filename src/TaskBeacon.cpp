@@ -106,7 +106,10 @@ bool BeaconTask::sendBeacon(System &system) {
     if (_gps.location.isUpdated()) {
       lat = _gps.location.lat();
       lng = _gps.location.lng();
+      system.gpsConnected(true);
+      system.gpsLocation(lat, lng);
     } else {
+      system.gpsConnected(false);
       return false;
     }
   }
